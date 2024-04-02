@@ -1,0 +1,203 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.bd-callout {
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #c8e2ff;
+    border-left-width: 5px;
+    border-radius: 0.25rem;
+    background-color: #cff4fc;
+    color: #055160;
+}
+
+.bd-callout-info {
+    border-left-color: #17a2b8;
+    background-color: #f0f9ff;
+}
+
+#suggestions {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 10;
+}
+#suggestions button:hover {
+    background-color: #0d6efd;
+    color: #fff;
+}
+#selected-symptoms:empty + p {
+    display: block;
+}
+.no-symptom-note {
+    display: none;
+    text-align: left;
+}
+#selected-symptoms li button {
+    font-size: 10px;
+}
+.bg_wait {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+}
+#symptom-severity-table tr .critical {
+    color: #ff0000;
+    font-weight: bold;
+}
+#symptom-severity-table tr .severe {
+    color: #FFA500;
+    font-weight: bold;
+}
+#symptom-severity-table tr .moderate {
+    color: #555555;
+    font-weight: bold;
+}
+.toast {
+    position: fixed;
+    bottom: 50px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 11001;
+    font-weight: bold;
+    color: #ff0000;
+}
+.btn[aria-expanded="true"] .fa-chevron-down,
+.btn[aria-expanded="false"] .fa-chevron-up {
+    display: none;
+}
+
+.btn[aria-expanded="true"] .fa-chevron-up,
+.btn[aria-expanded="false"] .fa-chevron-down {
+    display: inline-block;
+}
+
+.contains-diseases .predicted-disease-placeholder, #predicted-breakdown-container, .predicted-disease-info {
+    display: none;
+}
+#contains-diseases .predicted-disease-info {
+    display: block;
+}
+.debug #predicted-breakdown-container {
+    display: flex;
+}
+.debug .contains-diseases .predicted-disease-info {
+    display: block;
+}
+.btn-info-instruction {
+    cursor: pointer;
+    padding: 5px;
+}
+#probability-threshold:disabled + #edit-probability-threshold {
+    display: inline-block;
+}
+
+#edit-probability-threshold {
+    display: none;
+}
+
+#probability-threshold:not(:disabled) ~ #set-probability-threshold {
+    display: inline-block;
+}
+
+#set-probability-threshold {
+    display: none;
+}
+#threshold-change-info {
+    display: none;
+}
+.editing #threshold-change-info {
+    display: block;
+}
+#disease-showing-warning {
+    display: none;
+}
+.debug #disease-showing-warning {
+    display: block;
+}
+#switch_to_english {
+    cursor: pointer;
+}
+.cover-container {
+    z-index: 2;
+}
+.background{
+    background: #ffffff;
+    z-index: 1;
+}
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 255, 0, 0.35);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+.circles li:nth-child(1){
+    left: 25%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

@@ -16,7 +16,7 @@ Before running this application, ensure that your system meets the following req
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/your-username/Personalized-Health-Assessment-Through-Interactive-AI.git
    ```
 
 2. Navigate to the Web Server Directory:
